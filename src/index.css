@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+
+  h1 {
+    @apply font-bold text-hd1;
+  }
+
+  h2 {
+    @apply font-bold text-hd2;
+  }
+
+  h3 {
+    @apply font-bold text-hd3;
+  }
+
+  h4 {
+    @apply font-bold text-hd4
+  }  
+
+  .absolute-page{
+    @apply absolute top-0 left-0 right-0 bottom-0
+  }
+
+  .fixed-page{
+    @apply fixed top-0 left-0 right-0 bottom-0
+  }
+  
+  .flexcent{
+    @apply flex items-center justify-center
+  }
+
+  .flexlent{
+    @apply flex items-center justify-start
+  }
+
+  .flexrent{
+    @apply flex items-center justify-end
+  }
+}
