@@ -14,10 +14,17 @@ export default {
   },
 
   created(){
-    this.$store.dispatch({
-        type: "getOrderItems"
-      }
-    )
+    if(!('AU' in localStorage)){
+      alert();
+     this.$router.replace("/");
+    }else{
+      this.$store.dispatch({
+          type: "getOrderItems"
+        }
+      )
+    }
+
+
   }
 
 

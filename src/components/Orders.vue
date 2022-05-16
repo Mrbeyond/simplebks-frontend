@@ -7,6 +7,7 @@
       <error-info />
     </div>
     <div v-else>
+      <seller-details />
       <order-items-table />
     </div>
   </div>
@@ -16,6 +17,7 @@ import { mapGetters } from 'vuex';
 import OrderItemsTable from "./OrderTable.vue";
 import LoadingTemplate from "./../views/LoadingTemplate.vue";
 import ErrorInfo from '@/views/ErrorInfo.vue';
+import SellerDetails from './SellerDetails.vue';
 
 
 
@@ -24,7 +26,8 @@ export default {
   components: {
     OrderItemsTable,
     LoadingTemplate,
-    ErrorInfo
+    ErrorInfo,
+    SellerDetails,
   },
 
   computed:{

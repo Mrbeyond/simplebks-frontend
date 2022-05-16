@@ -1,5 +1,5 @@
 <template>
-  <div class="p-2 xxe:-p5">
+  <div class="p-2 px-2p xxe:-p5">
     <div class="w-full min-w-full rounded_top overflow-x-auto">
       <table >
         <thead class="">
