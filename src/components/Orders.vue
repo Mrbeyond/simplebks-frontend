@@ -76,7 +76,7 @@ export default {
           computedLinkQuery.meta.first_link = 
           uri + computedLinkQuery.meta.first_link + `&dir=${dir}&sort=${sort}`
         }
-        console.log(computedLinkQuery);
+        // console.log(computedLinkQuery);
         return computedLinkQuery;
       }
     }

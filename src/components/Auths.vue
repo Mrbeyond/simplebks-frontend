@@ -94,7 +94,7 @@ export default {
         this.submitting = true;
         const uri = "http://localhost:5000/authenticate";
         let { data } = await axio.post(uri, payload);
-        // console.log(data);
+        console.log(data);
         localStorage.AU = window.btoa(JSON.stringify(data.data));
         saveTK(data.token);
         this.$router.push("/order_items");

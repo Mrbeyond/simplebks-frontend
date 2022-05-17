@@ -28,7 +28,7 @@ export default {
      this.$router.replace("/");
     }else{
       const {sort, dir}= this.paginationParams;      
-      const {limit=2, offset=0 } = this.$route.query;
+      const {limit=20, offset=0 } = this.$route.query;
       const query = extractPaginationQuery({sort, dir,limit, offset})
       this.$store.dispatch({
           type: "getOrderItems",

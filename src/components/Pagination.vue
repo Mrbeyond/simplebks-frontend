@@ -53,6 +53,6 @@ export default {
     @apply inline-block py-1 px-3 shadow-lint  border rounded
   }
   .active{
-    @apply bg-prm2 text-white
+    @apply bg-prm2 text-white pointer-events-none
   }
 </style>
