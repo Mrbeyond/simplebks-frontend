@@ -19,7 +19,6 @@ module.exports = {
       boxShadow: {
 				'lint':'0 1px 0 #091e4240',	
 				'simp-card':'0 1px 15px rgb(0 0 0 / 4%), 0 1px 6px rgb(0 0 0 / 4%)',
-				'splash': '-1px 1px 15px rgba(0,0,0,0.1), 1px -1px 15px rgba(0,0,0,0.1)',
 				'art':' -1.2px -0.5px 3px 0.3px rgba(0,0,0, 0.1), 1.2px 3px 5px 1.5px rgba(0,0,0,0.2)',
 			},
       fontSize: {

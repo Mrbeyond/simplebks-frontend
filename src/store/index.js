@@ -12,7 +12,7 @@ const store = createStore({
       limit: 20,
       sort: "shipping_limit_date",
       offset: 0,
-      dir:"ASC",
+      dir:"DESC",
       total: 0,
     },
     processing: {
@@ -77,6 +77,8 @@ const store = createStore({
                   await axios.get(uri, {headers:hToken()});
 
         const  {dir, sort} = state.paginationParams;
+
+        console.log({limit, total, offset, dir, sort});
 
         commit({
           type: "setOrderItems",

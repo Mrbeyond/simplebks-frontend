@@ -119,11 +119,8 @@ export default {
         
         const uri = "http://localhost:5000/account";
         let { data } = await axios.put(uri, payload, {headers: hToken()});
-        console.log(data);
         let {seller_state, seller_city} = data.data;
-        console.log({seller_state, seller_city});
         this.seller = { ...this.seller, seller_state, seller_city};
-        console.log(this.seller);
         localStorage.AU = window.btoa(JSON.stringify(this.seller));
         this.authResponse = "Details successfuly updated";
       } catch (error) {

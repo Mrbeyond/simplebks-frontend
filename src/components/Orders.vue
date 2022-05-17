@@ -8,6 +8,7 @@
     </div>
     <div v-else>
       <seller-details />
+      <order-sort />
       <order-pagination :pagination_meta="pagination_meta" />
       <order-items-table />
       <order-pagination :pagination_meta="pagination_meta" />
@@ -22,6 +23,7 @@ import ErrorInfo from '@/views/ErrorInfo.vue';
 import SellerDetails from './SellerDetails.vue';
 import OrderPagination from "./Pagination.vue";
 import { offsetPaginator } from '@/utilities/common';
+import OrderSort from './OrderSort.vue';
 
 
 export default {
@@ -31,7 +33,8 @@ export default {
     LoadingTemplate,
     ErrorInfo,
     SellerDetails,
-    OrderPagination
+    OrderPagination,
+    OrderSort
   },
 
   data: () => ({

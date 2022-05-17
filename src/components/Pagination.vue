@@ -31,7 +31,7 @@
 export default {
   name: "OrderPagination",
   props: {
-    pagination_meta: Array
+    pagination_meta: Object
   },
 
 
