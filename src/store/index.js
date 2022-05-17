@@ -1,4 +1,3 @@
-import { objectToQuery } from "@/utilities/common";
 import { errorParser } from "@/utilities/error_parser";
 import { hToken } from "@/utilities/local_storage";
 import axios from "axios";
@@ -13,6 +12,7 @@ const store = createStore({
       limit: 20,
       sort: "shipping_limit_date",
       offset: 0,
+      dir:"ASC",
       total: 0,
     },
     processing: {
@@ -61,7 +61,7 @@ const store = createStore({
   actions:{
 
     /** Fetch order items, commit into order_items */
-    async getOrderItems({commit, state}){
+    async getOrderItems({commit, state}, payload){
       try {
         commit({
           type: "setProcessing",
@@ -72,18 +72,19 @@ const store = createStore({
           error:null
         })
 
-        const payload = state.paginationParams;
-        const query =  objectToQuery(payload);
-        const uri = base_uri+"/order_items"+query;
+        const uri = base_uri+"/order_items"+payload.query;
         let {data:{data, limit, total, offset}} = 
                   await axios.get(uri, {headers:hToken()});
+
+        const  {dir, sort} = state.paginationParams;
+
         commit({
           type: "setOrderItems",
           data
         })
         commit({
           type: "setPaginationParams",
-          params: {limit, total, offset}
+          params: {limit, total, offset, dir, sort}
         })        
       } catch (error) {
         commit({

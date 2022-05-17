@@ -105,7 +105,7 @@ export default {
   }
 
   th{
-    @apply py-3 xx:py-5 px-2
+    @apply py-3 xx:py-5 px-2 font-medium
   }
 
   td{
