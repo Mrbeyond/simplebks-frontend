@@ -1,5 +1,8 @@
 # frontend
 
+## Note: Use Node 17x to run this app.
+
+
 ## Project setup
 ```
 npm install
